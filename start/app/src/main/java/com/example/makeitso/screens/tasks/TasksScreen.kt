@@ -44,7 +44,7 @@ fun TasksScreen(
   openScreen: (String) -> Unit,
   viewModel: TasksViewModel = hiltViewModel()
 ) {
-  // 1. AQUI SE AÑADE LA RECOLECCIÓN DEL FLOW
+
   val tasks = viewModel.tasks.collectAsStateWithLifecycle(emptyList())
 
   TasksScreenContent(
