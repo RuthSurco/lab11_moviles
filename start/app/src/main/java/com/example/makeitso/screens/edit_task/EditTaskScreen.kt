@@ -48,7 +48,8 @@ fun EditTaskScreen(
   viewModel: EditTaskViewModel = hiltViewModel()
 ) {
   val task by viewModel.task
-  val activity = LocalContext.current as AppCompatActivity
+  val context = LocalContext.current
+  val activity = context as? AppCompatActivity
 
   EditTaskScreenContent(
     task = task,
